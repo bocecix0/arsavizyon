@@ -1,7 +1,6 @@
-import * as fal from "@fal-ai/client";
+import { fal } from "@fal-ai/client";
 import { BuildingStyle, STYLE_PROMPTS } from "./types";
 
-fal.config({ credentials: process.env.FAL_KEY });
 
 export async function generateBuildingRender(
   landPhotoUrl: string,
@@ -39,7 +38,7 @@ export async function submitVideoGeneration(
         image_url: renderImageUrl,
         prompt:
           "Slow cinematic drone shot orbiting the building, rising from ground level to aerial view, golden hour warm lighting, professional real estate film, smooth camera movement",
-        duration: 8,
+        duration: "8s",
         aspect_ratio: "16:9",
       },
     }
@@ -61,7 +60,7 @@ export async function checkVideoStatus(requestId: string): Promise<{
     }
   );
 
-  if (status.status === "COMPLETED") {
+  if ((status.status as string) === "COMPLETED") {
     const result = await fal.queue.result(
       "fal-ai/veo3.1/fast/image-to-video",
       { requestId }
@@ -73,12 +72,12 @@ export async function checkVideoStatus(requestId: string): Promise<{
     };
   }
 
-  if (status.status === "FAILED") {
+  if ((status.status as string) === "FAILED") {
     return { status: "failed" };
   }
 
   return {
-    status: status.status === "IN_QUEUE" ? "pending" : "processing",
-    logs: (status.logs as Array<{ message: string }>)?.map((l) => l.message),
+    status: (status.status as string) === "IN_QUEUE" ? "pending" : "processing",
+    logs: ((status as any).logs as Array<{ message: string }>)?.map((l) => l.message),
   };
 }
