@@ -1,21 +1,21 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
-import { Zap, Film, Palette, Shield, Clock, Download } from "lucide-react";
+import { Heart, Sun, Home, Shield, Leaf, Gem } from "lucide-react";
 
 const features = [
-  { icon: Zap, title: "Anında Görsel", desc: "Fotoğraf yükle, 30 saniyede profesyonel render. AI teknolojisi ile arsanızın üzerine mükemmel bina tasarımı.", tag: "~30 saniye", color: "from-amber-500/20 to-yellow-600/5" },
-  { icon: Film, title: "İnşaat Videosu", desc: "8 saniyelik sinematik drone videosu ile müşterilerinizi ikna edin. Temel kazımadan tamamlanmaya kadar.", tag: "8 sn video", color: "from-purple-500/20 to-purple-700/5" },
-  { icon: Palette, title: "6 Bina Stili", desc: "Ege villasından modern rezidansa, Osmanlı mimarisinden eco tasarıma — her tarza uygun stil.", tag: "6 seçenek", color: "from-pink-500/20 to-rose-700/5" },
-  { icon: Shield, title: "Güvenli Depolama", desc: "Tüm görsel ve videolarınız güvenli bulutumuzda saklanır. İstediğiniz zaman indirin veya paylaşın.", tag: "Kalıcı", color: "from-emerald-500/20 to-green-700/5" },
-  { icon: Clock, title: "7/24 Erişim", desc: "Saat fark etmeksizin, istediğiniz yerden görsel üretin. Sunucularımız her zaman aktif.", tag: "7/24 aktif", color: "from-blue-500/20 to-sky-700/5" },
-  { icon: Download, title: "4K Çözünürlük", desc: "Baskı kalitesinde render çıktıları. Profesyonel sunumlar için hazır yüksek çözünürlüklü dosyalar.", tag: "4K", color: "from-gold/20 to-amber-700/5" },
+  { icon: Heart, title: "Hayalinize Dokunun", desc: "Boş arsanızın üzerine inşa edilecek yuvanızı saniyeler içinde görün. Yapay zeka değil, geleceğinize ayna tutuyoruz.", tag: "Hızlı & Etkileyici", color: "from-rose-500/20 to-red-600/5" },
+  { icon: Sun, title: "Geleceği İzleyin", desc: "Evinizin temelden çatıya yükselişini izleyin. Hayalinizdeki yaşam alanının doğuşuna şahit olun.", tag: "Sinematik", color: "from-amber-500/20 to-yellow-600/5" },
+  { icon: Home, title: "Size Özel Stiller", desc: "Sıcak bir taş ev, modern bir villa veya doğayla iç içe eko-yaşam. Sizin aileniz, sizin tarzınız.", tag: "Kişiselleştirilmiş", color: "from-orange-500/20 to-red-700/5" },
+  { icon: Shield, title: "Güvenli Mimari", desc: "Hayalleriniz bizimle güvende. İstediğiniz zaman ailenizle paylaşın, geleceği birlikte planlayın.", tag: "Sonsuz Güven", color: "from-emerald-500/20 to-green-700/5" },
+  { icon: Leaf, title: "Doğa ile Uyum", desc: "Arsanızın doğal yapısına en uygun, aileniz için huzur dolu alanlar yaratın.", tag: "Huzurlu Yaşam", color: "from-teal-500/20 to-emerald-700/5" },
+  { icon: Gem, title: "Paha Biçilemez Detaylar", desc: "Gerçek kadar net, hayal kadar kusursuz. En küçük ayrıntısına kadar yuvanızı hissedin.", tag: "Eşsiz Kalite", color: "from-gold/20 to-amber-700/5" },
 ];
 
 const steps = [
-  { n: "01", emoji: "📸", title: "Fotoğraf Yükle", desc: "Arsa veya arazinizin fotoğrafını yükleyin. JPG, PNG veya WebP." },
-  { n: "02", emoji: "🎨", title: "Stil Seç", desc: "6 farklı mimari stil arasından projenize uygun olanı seçin." },
-  { n: "03", emoji: "✨", title: "Görsel Al", desc: "30 saniye bekleyin, render ve/veya videoyu indirin." },
+  { n: "01", emoji: "🌱", title: "Arsanızı Ekleyin", desc: "Geleceğinizi inşa edeceğiniz toprağın fotoğrafını yükleyin." },
+  { n: "02", emoji: "🏡", title: "Hayalinizi Seçin", desc: "Sizi en çok yansıtan, aileniz için en huzurlu stili belirleyin." },
+  { n: "03", emoji: "✨", title: "Yuvanızla Tanışın", desc: "Saniyeler içinde gelecekteki evinizin kapılarını aralayın." },
 ];
 
 function useReveal(delay = 0) {
@@ -86,11 +86,10 @@ export default function Features() {
             <div className="w-8 h-px bg-gold/50"/>ÖZELLİKLER<div className="w-8 h-px bg-gold/50"/>
           </div>
           <h2 className="font-display text-4xl sm:text-5xl font-bold mb-4">
-            Neden <span className="text-gradient-gold">ArsaVizyon</span>?
+            Hayalleriniz <span className="text-gradient-gold">Gerçekleşiyor</span>
           </h2>
           <p className="text-muted max-w-xl mx-auto">
-            Bodrum'dan İstanbul'a yüzlerce müteahhit ve gayrimenkul geliştirici
-            ArsaVizyon ile müşterilerine çarpıcı sunumlar yapıyor.
+            Yüzlerce aile, bir toprak parçasının nasıl sıcak bir yuvaya dönüşebileceğini ArsaVizyon ile keşfetti. Geleceğinize giden ilk adımı atın.
           </p>
         </div>
 
@@ -106,10 +105,10 @@ export default function Features() {
           <div className="flex-1 h-px bg-gradient-to-r from-transparent to-border"/>
           <div className="text-center">
             <div className="inline-flex items-center gap-2 text-gold text-sm font-medium">
-              <div className="w-6 h-px bg-gold/50"/>NASIL ÇALIŞIR<div className="w-6 h-px bg-gold/50"/>
+              <div className="w-6 h-px bg-gold/50"/>ADIM ADIM<div className="w-6 h-px bg-gold/50"/>
             </div>
             <h2 className="font-display text-3xl sm:text-4xl font-bold mt-2">
-              3 Adımda Profesyonel Görsel
+              3 Adımda Yeni Hayatınız
             </h2>
           </div>
           <div className="flex-1 h-px bg-gradient-to-l from-transparent to-border"/>

@@ -44,22 +44,22 @@ function BeforeAfterSlider() {
       onTouchStart={(e) => { dragging.current = true; updatePos(e.touches[0].clientX); }}
     >
       {/* After (full width underneath) */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#1a1200] to-[#0a0800] flex items-center justify-center">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#2a1c12] to-[#140c06] flex items-center justify-center">
         <div className="text-center">
-          <div className="text-6xl mb-3">🏢</div>
-          <div className="text-gold text-sm font-medium">AI Render</div>
-          <div className="text-xs text-muted mt-1">Modern Minimal Stil</div>
+          <div className="text-6xl mb-3">🏡</div>
+          <div className="text-gold text-sm font-medium">Geleceğiniz</div>
+          <div className="text-xs text-muted mt-1">Sıcak, güvenli yuvanız</div>
         </div>
         <div className="absolute bottom-4 right-4 bg-gold/20 backdrop-blur-sm border border-gold/30 rounded-lg px-3 py-1.5 text-xs text-gold font-medium">
-          ✨ Sonra
+          ✨ Gelecek
         </div>
         {/* Fake building lines */}
         <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 400 225" fill="none">
-          <rect x="120" y="60" width="160" height="140" stroke="#C9A84C" strokeWidth="1"/>
-          <rect x="160" y="30" width="80" height="35" stroke="#C9A84C" strokeWidth="1"/>
+          <rect x="120" y="60" width="160" height="140" stroke="#D4A373" strokeWidth="1"/>
+          <rect x="160" y="30" width="80" height="35" stroke="#D4A373" strokeWidth="1"/>
           {[130,150,170,190,210,230,250].map(x =>
             [70,100,130,160].map(y => (
-              <rect key={`${x}-${y}`} x={x} y={y} width="12" height="18" fill="#C9A84C" opacity="0.4"/>
+              <rect key={`${x}-${y}`} x={x} y={y} width="12" height="18" fill="#D4A373" opacity="0.4"/>
             ))
           )}
         </svg>
@@ -67,16 +67,16 @@ function BeforeAfterSlider() {
 
       {/* Before (clipped) */}
       <div
-        className="absolute inset-0 bg-gradient-to-br from-[#111] to-[#0a0a0a] flex items-center justify-center"
+        className="absolute inset-0 bg-gradient-to-br from-[#1C1714] to-[#120E0B] flex items-center justify-center"
         style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
       >
         <div className="text-center">
-          <div className="text-6xl mb-3">📸</div>
-          <div className="text-white/60 text-sm font-medium">Ham Arsa</div>
-          <div className="text-xs text-muted mt-1">Boş arazi</div>
+          <div className="text-6xl mb-3">🌱</div>
+          <div className="text-white/60 text-sm font-medium">Bugün</div>
+          <div className="text-xs text-muted mt-1">Boş bir arsa</div>
         </div>
         <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-sm border border-white/10 rounded-lg px-3 py-1.5 text-xs text-muted">
-          Önce
+          Bugün
         </div>
       </div>
 
@@ -130,23 +130,23 @@ export default function Hero() {
             ))}
           </div>
           <Star className="w-3.5 h-3.5 text-gold fill-gold" />
-          <span className="text-xs text-gold font-medium">500+ Müteahhit Kullanıyor</span>
+          <span className="text-xs text-gold font-medium">Binlerce mutlu aile kullanıyor</span>
         </div>
 
         {/* Headline */}
         <h1 className={`font-display text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-[1.1] transition-all duration-700 delay-200 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
-          Arsanızın{" "}
-          <span className="text-gradient-gold">Geleceğini</span>
+          Hayalinizdeki{" "}
+          <span className="text-gradient-gold">Yuvayı</span>
           <br />
-          <span className="text-white">Görün</span>
+          <span className="text-white">Bugün Görün</span>
         </h1>
 
         {/* Sub */}
         <p className={`text-lg sm:text-xl text-muted max-w-2xl mx-auto mb-10 leading-relaxed transition-all duration-700 delay-300 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
-          AI ile saniyeler içinde profesyonel bina görseli ve inşaat videosu.
+          Arsanız sadece topraktan ibaret değil; ailenizin geleceği, yeni yuvanızın temeli.
           <br className="hidden sm:block"/>
-          Fotoğraf yükle,{" "}
-          <span className="text-white font-medium">30 saniyede profesyonel render</span> al.
+          Hayallerinizdeki yaşam alanını{" "}
+          <span className="text-white font-medium">saniyeler içinde gerçeğe dönüştürün.</span>
         </p>
 
         {/* CTAs */}
@@ -176,9 +176,9 @@ export default function Hero() {
         {/* Stats */}
         <div className={`mt-12 grid grid-cols-3 gap-8 max-w-lg mx-auto transition-all duration-700 delay-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
           {[
-            { value: "30sn", label: "Render Süresi" },
-            { value: "6", label: "Mimari Stil" },
-            { value: "500+", label: "Aktif Kullanıcı" },
+            { value: "30sn", label: "Gerçekleşen Hayal" },
+            { value: "Sınırsız", label: "Yaşam Alanı" },
+            { value: "500+", label: "Mutlu Aile" },
           ].map((s) => (
             <div key={s.label} className="text-center group">
               <div className="font-display text-3xl font-bold text-gradient-gold group-hover:scale-110 transition-transform duration-200 inline-block">{s.value}</div>

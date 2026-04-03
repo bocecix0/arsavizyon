@@ -154,22 +154,22 @@ export default function Pricing() {
         {/* Header */}
         <div ref={headerRef} className={`text-center mb-6 reveal ${headerVisible ? "visible" : ""}`}>
           <div className="inline-flex items-center gap-2 text-gold text-sm font-medium mb-4">
-            <div className="w-8 h-px bg-gold/50"/>FİYATLANDIRMA<div className="w-8 h-px bg-gold/50"/>
+            <div className="w-8 h-px bg-gold/50"/>GELECEĞİNİZ<div className="w-8 h-px bg-gold/50"/>
           </div>
           <h2 className="font-display text-4xl sm:text-5xl font-bold mb-4">
-            Şeffaf <span className="text-gradient-gold">Fiyatlar</span>
+            Hayallerinize <span className="text-gradient-gold">Değer Katın</span>
           </h2>
           <p className="text-muted max-w-xl mx-auto">
-            Kredi satın al, istediğin zaman kullan. Abonelik yok, gizli ücret yok.
+            Yeni hayatınıza başlamak için ilk adımı atın. Abonelik stresi olmadan, sadece ihtiyacınız kadar kullanın.
           </p>
         </div>
 
         {/* Credit cost pills */}
         <div className={`flex flex-wrap justify-center gap-3 mb-12 reveal ${headerVisible ? "visible delay-200" : ""}`}>
           {[
-            { emoji: "🖼️", label: "Sadece görsel", cost: "1 kredi" },
-            { emoji: "🎬", label: "Görsel + Video", cost: "4 kredi" },
-            { emoji: "🎁", label: "Yeni üye bonusu", cost: "3 ücretsiz" },
+            { emoji: "🖼️", label: "Geleceğinize Bir Bakış", cost: "1 kredi" },
+            { emoji: "🎬", label: "Yuvanızın Doğuş Hikayesi", cost: "4 kredi" },
+            { emoji: "🎁", label: "Tanışma Hediyesi", cost: "3 ücretsiz" },
           ].map((p) => (
             <div key={p.label} className="flex items-center gap-2 bg-card border border-border rounded-xl px-4 py-2.5 text-sm hover:border-gold/30 transition-colors">
               <span>{p.emoji}</span>
@@ -195,9 +195,9 @@ export default function Pricing() {
 
         {/* Stats row */}
         <div className="mt-20 grid grid-cols-3 gap-6 border-t border-border pt-12">
-          <StatCounter target={500} suffix="+" label="Aktif Kullanıcı"/>
-          <StatCounter target={30} suffix="sn" label="Ortalama Render"/>
-          <StatCounter target={6} suffix="" label="Mimari Stil"/>
+          <StatCounter target={500} suffix="+" label="Mutlu Aile"/>
+          <StatCounter target={30} suffix="sn" label="Gerçekleşen Hayal"/>
+          <StatCounter target={6} suffix="" label="Sıcak Yuva Stili"/>
         </div>
       </div>
     </section>

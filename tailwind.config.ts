@@ -9,13 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0A0A0A",
-        card: "#1A1A1A",
-        gold: "#C9A84C",
-        "gold-light": "#E8C97A",
-        "gold-dark": "#A07830",
-        muted: "#888888",
-        border: "#2A2A2A",
+        background: "#1C1714",
+        card: "#26201C",
+        gold: "#D4A373",
+        "gold-light": "#E9C46A",
+        "gold-dark": "#BC6C25",
+        muted: "#A39B94",
+        border: "#3A322C",
       },
       fontFamily: {
         display: ["var(--font-playfair)", "serif"],
@@ -52,10 +52,10 @@ const config: Config = {
         },
       },
       backgroundImage: {
-        "gradient-gold": "linear-gradient(135deg, #C9A84C, #E8C97A, #C9A84C)",
-        "gradient-dark": "linear-gradient(180deg, #0A0A0A 0%, #141414 100%)",
+        "gradient-gold": "linear-gradient(135deg, #D4A373, #E9C46A, #D4A373)",
+        "gradient-dark": "linear-gradient(180deg, #1C1714 0%, #26201C 100%)",
         shimmer:
-          "linear-gradient(90deg, #1A1A1A 25%, #2A2A2A 50%, #1A1A1A 75%)",
+          "linear-gradient(90deg, #26201C 25%, #3A322C 50%, #26201C 75%)",
       },
     },
   },

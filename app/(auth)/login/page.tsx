@@ -48,9 +48,9 @@ function LoginContent() {
   return (
     <div className="w-full max-w-md animate-fade-in">
       <div className="text-center mb-8">
-        <h1 className="font-display text-3xl font-bold mb-2">Giriş Yap</h1>
+        <h1 className="font-display text-3xl font-bold mb-2">Yuvanıza Hoş Geldiniz</h1>
         <p className="text-muted text-sm">
-          Hesabınıza giriş yaparak görselleştirmeye devam edin
+          Hayallerinizi inşa etmeye kaldığınız yerden devam edin
         </p>
       </div>
 
@@ -110,7 +110,7 @@ function LoginContent() {
       </Card>
 
       <p className="text-center text-muted text-sm mt-6">
-        Hesabınız yok mu?{" "}
+        Aramıza katılmak ister misiniz?{" "}
         <Link
           href="/signup"
           className="text-gold hover:text-gold-light transition-colors font-medium"
@@ -120,8 +120,8 @@ function LoginContent() {
       </p>
 
       <p className="text-center text-muted/50 text-xs mt-3">
-        Kayıt olunca{" "}
-        <span className="text-gold/70">3 ücretsiz kredi</span> kazanırsınız
+        İlk adımınızı atın,{" "}
+        <span className="text-gold/70">bizden 3 hediye kredi</span> kazanın
       </p>
     </div>
   );
